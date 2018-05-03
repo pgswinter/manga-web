@@ -1,0 +1,8 @@
+export const ALL_ITEMS = "ALL_ITEMS"
+export const ALL_ITEMS_SUCCESS = "ALL_ITEMS_SUCCESS"
+export const ITEM_BY_ID = "ITEM_BY_ID"
+export const ITEM_BY_ID_SUCCESS = "ITEM_BY_ID_SUCCESS"
+export const ALL_PAGES = "ALL_PAGES"
+export const ALL_PAGES_SUCCESS = "ALL_PAGES_SUCCESS"
+export const PAGE_BY_ID = "PAGE_BY_ID"
+export const PAGE_BY_ID_SUCCESS = "PAGE_BY_ID_SUCCESS"

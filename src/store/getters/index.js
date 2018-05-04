@@ -14,10 +14,10 @@ export const itemGetters = {
 	},
 	getPageById: (state, getters) => id => {
 		if(getters.allPages.length > 0){
-			console.log(getters.allPages)
-			return getters.allPages.filter((i,n)=>n.idItem === id)
+			return getters.allPages.filter(p=> p.idItem === id)
 		}else{
 			return state.page
 		}
+
 	}
 }

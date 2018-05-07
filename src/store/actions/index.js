@@ -26,14 +26,14 @@ export const itemActions = {
 	},
 	allPages({commit}){
 		commit(ALL_PAGES)
-		axios.get(`${API_URL}/pages`).then(response => {
+		axios.get(`${API_URL}/chapter_mangas`).then(response => {
 			commit(ALL_PAGES_SUCCESS,response.data)
 		})
 	},
-	pagesByIdItem({commit},payload){
-		commit(PAGE_BY_ID)
-		axios.get(`${API_URL}/pages?idItem=${payload}`).then(response => {
-			commit(PAGE_BY_ID_SUCCESS,response.data)
-		})
-	}
+	// pagesByIdItem({commit},payload){
+	// 	commit(PAGE_BY_ID)
+	// 	axios.get(`${API_URL}/pages?idItem=${payload}`).then(response => {
+	// 		commit(PAGE_BY_ID_SUCCESS,response.data)
+	// 	})
+	// }
 }

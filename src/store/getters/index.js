@@ -12,12 +12,12 @@ export const itemGetters = {
 	allPages: (state) => {
 		return state.pages
 	},
-	getPageById: (state, getters) => id => {
+	getPageById: (state, getters) => (idItem,latestChapter) => {
 		if(getters.allPages.length > 0){
-			return getters.allPages.filter(p=> p.idItem === id)
+			// const getPagesById = getters.allPages.filter(p=> p.idItem === id)
+			return getters.allPages.filter(p=> (p.idItem === idItem && p.id === latestChapter))
 		}else{
 			return state.page
 		}
-
 	}
 }

@@ -3,7 +3,7 @@
 		<h3>Hello, There is Home</h3>
 		<ul>
 			<li v-for="item in items">
-				<router-link :to="'details/'+item.id">
+				<router-link :to="'details/'+item.id+'/'+item.latest_chapter">
 					<h3>{{item.name}}</h3>
 					<img :src="item.cover_url" alt="" />	
 				</router-link>

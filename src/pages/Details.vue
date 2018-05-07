@@ -1,18 +1,17 @@
 <template>
 	<div>
 		<div :item="item">
-			<h3>{{item.name}}</h3>
+			<router-link to="/">
+				<h3>{{item.name}}</h3>
+			</router-link>
 		</div>
 		<ul>
-			<li v-for="ip in page" :page="page">
-				<img :src="ip.url" alt="" />
+			<li v-for="chapter in chapterMangas" :chapterMangas="chapterMangas">
+				<div v-for="page in chapter.img_chapter">
+					<img :src="page.url" alt="" />	
+				</div>
 			</li>
 		</ul>
-		<!-- <ul>
-			<li v-for="page in pages" :pages="pages">
-				<img :src="page.url" alt="" />
-			</li>
-		</ul> -->
 	</div>
 </template>
 <script>
@@ -35,9 +34,10 @@
 			pages(){
 				return this.$store.getters.allPages
 			},
-			page(){
+			chapterMangas(){
 				const paramId = parseInt(this.$route.params['id'])
-				return this.$store.getters.getPageById(paramId)
+				const paramLatestChapter = parseInt(this.$route.params['chapter'])
+				return this.$store.getters.getPageById(paramId,paramLatestChapter)
 			}
 		}
 	}
